@@ -1,0 +1,10 @@
+<world name = "worldA">
+	<sector name = "sectorA">
+		<entity class ="Entity" name = "entityA">			
+			<action class = "ActionPlayMusic" name = "actionA" fileName = "Wnn">
+			</action>
+			<!--<action class = "ActionPlaySound" name = "actionB" fileName = "content/audio/canary.wav">
+			</action>-->
+		</entity>
+	</sector>
+</world>

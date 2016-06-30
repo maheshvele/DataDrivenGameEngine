@@ -1,0 +1,775 @@
+<world name="Earth">
+	<float name="Gravity">1.0</float>
+	<board name="board1" player="1">		
+	</board>
+	<board name="board2" player="2">
+	</board>
+	<sector name="Backend">
+		<entity class="Entity" name="AudioEntity">
+			<action name="ReactPlayRotateSound" class="ReactionAttributed" subtype="PlayRotate">
+				<action name="PlayRotate" class="ActionPlaySound" fileName="content/audio/Rotate.wav">
+				</action>
+			</action>
+			<action name="ReactPlayClearRowSound" class="ReactionAttributed" subtype="PlayClearRow">
+				<action name="PlayClearRow" class="ActionPlaySound" fileName="content/audio/ClearRow.wav">
+				</action>
+			</action>
+			<action name="ReactPlayMoveUpSound" class="ReactionAttributed" subtype="PlayMoveUp">
+				<action name="PlayMoveUp" class="ActionPlaySound" fileName="content/audio/MoveUp.wav">
+				</action>
+			</action>
+			<action name="ReactPlayTouchSound" class="ReactionAttributed" subtype="PlayTouch">
+				<action name="PlayTouch" class="ActionPlaySound" fileName="content/audio/Touch.wav">
+				</action>
+			</action><action name="ReactPlaySplatSound" class="ReactionAttributed" subtype="PlaySplat">
+				<action name="PlaySplat" class="ActionPlaySound" fileName="content/audio/Splat.wav">
+				</action>
+			</action>
+			<action name="ReactPlayBackgroundMusic" class="ReactionAttributed" subtype="PlayBGM">
+				<action name="PlayMusic" class="ActionPlayMusic" fileName="BGM">
+				</action>
+			</action>
+			<action name="ReactPlayWinMusic" class="ReactionAttributed" subtype="PlayWin">
+				<action name="PlayWin" class="ActionPlayMusic" fileName="win">
+				</action>
+			</action>
+		</entity>
+		<entity class = "Entity" name = "KeyListener">
+			<action name ="W" class="ActionKeyListen" Player="1"/>
+			<action name ="A" class="ActionKeyListen" Player="1"/>
+			<action name ="S" class="ActionKeyListen" Player="1"/>
+			<action name ="D" class="ActionKeyListen" Player="1"/>
+			<action name ="Up" class="ActionKeyListen" Player="2"/>
+			<action name ="Down" class="ActionKeyListen" Player="2"/>
+			<action name ="Left" class="ActionKeyListen" Player="2"/>
+			<action name ="Right" class="ActionKeyListen" Player="2"/>
+			<action name ="Return" class="ActionKeyListen" Player="1"/>
+			<action name ="1" class="ActionKeyListen" Player="1"/>
+			<action name ="2" class="ActionKeyListen" Player="1"/>
+			<action name ="3" class="ActionKeyListen" Player="1"/>
+			<action name ="4" class="ActionKeyListen" Player="1"/>
+			<action name ="Numpad1" class="ActionKeyListen" Player="2"/>
+			<action name ="Numpad4" class="ActionKeyListen" Player="2"/>
+			<action name ="Numpad2" class="ActionKeyListen" Player="2"/>
+			<action name ="Numpad3" class="ActionKeyListen" Player="2"/>
+		</entity>
+		<entity class="Entity" name="SpawnContainer">
+			<TetrominoSpawner name="pool" board1="board1" board2="board2">
+				<SectorTetromino name="IBlock">
+					<float name="X">10.0</float>
+					<float name="Y">20.0</float>
+					<float name="Width">32.0</float>
+					<float name="Height">32.0</float>
+					<BlockEntity name="block0" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block1" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block2" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block3" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block4" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block5" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block6" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block7" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block8" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block9" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block10" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block11" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block12" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block13" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block14" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block15" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+				</SectorTetromino>
+				<SectorTetromino name="OBlock">
+					<float name="X">10.0</float>
+					<float name="Y">20.0</float>
+					<float name="Width">32.0</float>
+					<float name="Height">32.0</float>
+					<BlockEntity name="block0" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block1" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block2" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block3" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block4" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block5" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block6" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block7" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block8" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block9" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block10" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block11" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block12" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block13" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block14" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block15" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+				</SectorTetromino>
+				<SectorTetromino name="JBlock">
+					<float name="X">10.0</float>
+					<float name="Y">20.0</float>
+					<float name="Width">32.0</float>
+					<float name="Height">32.0</float>
+					<BlockEntity name="block0" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block1" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block2" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block3" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block4" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block5" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block6" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block7" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block8" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block9" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block10" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block11" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block12" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block13" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block14" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block15" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+				</SectorTetromino>
+				<SectorTetromino name="LBlock">
+					<float name="X">10.0</float>
+					<float name="Y">20.0</float>
+					<float name="Width">32.0</float>
+					<float name="Height">32.0</float>
+					<BlockEntity name="block0" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block1" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block2" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block3" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block4" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block5" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block6" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block7" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block8" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block9" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block10" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block11" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block12" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block13" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block14" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block15" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+				</SectorTetromino>
+				<SectorTetromino name="TBlock">
+					<float name="X">10.0</float>
+					<float name="Y">20.0</float>
+					<float name="Width">32.0</float>
+					<float name="Height">32.0</float>
+					<BlockEntity name="block0" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block1" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block2" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block3" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block4" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block5" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block6" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block7" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block8" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block9" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block10" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block11" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block12" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block13" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block14" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block15" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+				</SectorTetromino>
+				<SectorTetromino name="SBlock">
+					<float name="X">10.0</float>
+					<float name="Y">20.0</float>
+					<float name="Width">32.0</float>
+					<float name="Height">32.0</float>
+					<BlockEntity name="block0" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block1" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block2" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block3" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block4" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block5" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block6" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block7" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block8" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block9" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block10" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block11" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block12" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block13" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block14" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block15" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+				</SectorTetromino>
+				<SectorTetromino name="ZBlock">
+					<float name="X">10.0</float>
+					<float name="Y">20.0</float>
+					<float name="Width">32.0</float>
+					<float name="Height">32.0</float>
+					<BlockEntity name="block0" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block1" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block2" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block3" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block4" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block5" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block6" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block7" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block8" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block9" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block10" class="Entity">
+						<integer name = "value" index="0">1</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block11" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block12" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">1</integer>
+					</BlockEntity>
+					<BlockEntity name="block13" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">1</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block14" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">1</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+					<BlockEntity name="block15" class="Entity">
+						<integer name = "value" index="0">0</integer>
+						<integer name = "value" index="1">0</integer>
+						<integer name = "value" index="2">0</integer>
+						<integer name = "value" index="3">0</integer>
+					</BlockEntity>
+				</SectorTetromino>
+			</TetrominoSpawner>
+		</entity>
+	</sector>
+</world>

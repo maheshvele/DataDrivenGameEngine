@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Library", "..\source\Library\Library.vcxproj", "{62DDCC8A-71A6-45F8-97F7-382CB0FA4065}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest_PC", "..\source\UnitTests\UnitTest_PC\UnitTest_PC.vcxproj", "{B9C8520D-81F8-40B9-870D-7C8F7185EA69}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tetris", "..\source\Tetris\Tetris\Tetris.vcxproj", "{5457B004-CED8-42A8-88FC-7AFA2ACA0D06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62DDCC8A-71A6-45F8-97F7-382CB0FA4065}.Debug|Win32.ActiveCfg = Debug|Win32
+		{62DDCC8A-71A6-45F8-97F7-382CB0FA4065}.Debug|Win32.Build.0 = Debug|Win32
+		{62DDCC8A-71A6-45F8-97F7-382CB0FA4065}.Release|Win32.ActiveCfg = Release|Win32
+		{62DDCC8A-71A6-45F8-97F7-382CB0FA4065}.Release|Win32.Build.0 = Release|Win32
+		{B9C8520D-81F8-40B9-870D-7C8F7185EA69}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B9C8520D-81F8-40B9-870D-7C8F7185EA69}.Debug|Win32.Build.0 = Debug|Win32
+		{B9C8520D-81F8-40B9-870D-7C8F7185EA69}.Release|Win32.ActiveCfg = Release|Win32
+		{B9C8520D-81F8-40B9-870D-7C8F7185EA69}.Release|Win32.Build.0 = Release|Win32
+		{5457B004-CED8-42A8-88FC-7AFA2ACA0D06}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5457B004-CED8-42A8-88FC-7AFA2ACA0D06}.Debug|Win32.Build.0 = Debug|Win32
+		{5457B004-CED8-42A8-88FC-7AFA2ACA0D06}.Release|Win32.ActiveCfg = Release|Win32
+		{5457B004-CED8-42A8-88FC-7AFA2ACA0D06}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

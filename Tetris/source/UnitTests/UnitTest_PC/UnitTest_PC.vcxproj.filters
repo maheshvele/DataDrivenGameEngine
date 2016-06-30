@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Test Classes">
+      <UniqueIdentifier>{87e6883e-b68e-45a8-a2c9-c2b8662ad4cd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="AttributedFoo.h">
+      <Filter>Test Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="ParseHelperFoo.h">
+      <Filter>Test Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SharedDataFoo.h">
+      <Filter>Test Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SubscriberFoo.h">
+      <Filter>Test Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionWhileTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="FooTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SListTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="VectorTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="StackTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="HashmapTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DatumTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ScopeTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AttributedTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="XMLTests.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TableParseTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FactoryTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UniverseTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UniverseParseTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ActionListTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ActionParseTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ActionCreateDestroyTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ActionExpressionTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="EventTests.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ReactionTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="BoardTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ActionIfTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ActionCreateEntityTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TetrominoEntityTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TetrominoSpawnerTest.h">
+      <Filter>Tests</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FooTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SListTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StackTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HashmapTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DatumTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScopeTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributedTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributedFoo.cpp">
+      <Filter>Test Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="ParseHelperFoo.cpp">
+      <Filter>Test Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="XMLTests.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedDataFoo.cpp">
+      <Filter>Test Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="TableParseTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoryTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UniverseTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UniverseParseTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionListTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionParseTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionCreateDestroyTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionExpressionTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EventTests.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SubscriberFoo.cpp">
+      <Filter>Test Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="ReactionTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BoardTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionCreateEntityTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TetrominoEntityTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TetrominoSpawnerTest.cpp">
+      <Filter>Generated Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
